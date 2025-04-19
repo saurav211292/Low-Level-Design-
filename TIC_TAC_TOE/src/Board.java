@@ -82,6 +82,11 @@ public class Board {
                 return true; // Check diagonal from top-left to bottom-right for a winner
             }
         }
+        for (int i = 0; i < size; i++) {
+            if (board[0][2] != null && board[0][2].equals(board[1][1]) && board[1][1].equals(board[2][0])) {
+                return true; // Check diagonal from top-right to bottom-left for a winner
+            }
+        }
         return false;
     }
 
